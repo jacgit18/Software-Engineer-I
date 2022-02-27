@@ -1,5 +1,5 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Router, Routes, Route } from "react-router-dom";
 import { Card } from 'react-bootstrap';
 import {
   ChakraProvider,
@@ -13,6 +13,8 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import Home from './component/home';
+import Why from './component/Why';
 
 const Child1 = (props) => (
   <>
@@ -68,6 +70,10 @@ export default class App extends React.Component {
           <Child3></Child3>
           <Child4></Child4>
         </Grid>
+        <Routes>
+        {/* <Route path="/" element={<Home/>}/>
+        <Route path="/why" element={<Why/>} /> */}
+      </Routes>
       </Box>
     </ChakraProvider>
   );
