@@ -1,0 +1,31 @@
+{
+  "name": "software-engineer-i",
+  "version": "1.0.0",
+  "description": "<img src=\"https://media2.giphy.com/media/Nx0rz3jtxtEre/giphy.gif?cid=ecf05e47k1el00v2wbzxdaemqy93cxosmaf6bp2r9trzlc03&rid=giphy.gif&ct=g\"/>",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon -r dotenv/config index.js dotenv_config_path=.env",
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacgit18/Software-Engineer-I.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacgit18/Software-Engineer-I/issues"
+  },
+  "homepage": "https://github.com/jacgit18/Software-Engineer-I#readme",
+  
+  "dependencies": {
+    "axios": "^0.26.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
