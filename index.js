@@ -1,11 +1,10 @@
 const express = require('express');
 require('dotenv').config();
 const fetch = require('node-fetch');
-const axios = require('axios');
 
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
@@ -35,11 +34,17 @@ app.use(express.urlencoded({extended: true}));
 // app.get('/:user', async (request, response) => {
 app.get('/', async (request, response) => {
 
-  const url = `https://api.github.com/users/user?${jacgit18}`
-  let res = await fetch(url)
+  // const url = `https://api.github.com/users/user?${jacgit18}`
+  const url = `https://api.github.com/users/jacgit18`
+
+  const res = await fetch(url)
   const data = await res.json();
-  // console.log(data);
-  response.json(data)
+  let parsedBody = JSON.parse(data);
+  let user = parsedBody.login
+  // console.log(data.login);
+  // response.json(data);
+  response.send({user})
+
 });
 
 
@@ -53,21 +58,21 @@ app.get('/', async (request, response) => {
 //   res.sendStatus(200)
 // })
 
-app.get('/weather/:latlon', async (request, response) => {
-  console.log(request.params);
+// app.get('/weather/:latlon', async (request, response) => {
+//   console.log(request.params);
 
 
-  const api_url = ``;
-  const api_response = await fetch(api_url);
-  const api_data = await api_response.json();
+//   const api_url = ``;
+//   const api_response = await fetch(api_url);
+//   const api_data = await api_response.json();
 
 
 
-  // const data = {
-  //   apiOne: api_data,
-  // };
-  // response.json(data);
-});
+//   // const data = {
+//   //   apiOne: api_data,
+//   // };
+//   // response.json(data);
+// });
 
 
 app.listen(port, () => {

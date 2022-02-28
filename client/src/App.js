@@ -1,5 +1,5 @@
-import React from 'react';
-import { Router, Routes, Route } from "react-router-dom";
+import React,{Component} from 'react';
+// import { Router, Routes, Route } from "react-router-dom";
 import { Card } from 'react-bootstrap';
 import {
   ChakraProvider,
@@ -13,8 +13,10 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
-import Home from './component/home';
-import Why from './component/Why';
+import GitHubInfo from './component/GitHubInfo';
+
+// import Home from './component/home';
+// import Why from './component/Why';
 
 const Child1 = (props) => (
   <>
@@ -44,7 +46,7 @@ const Child4 = () => (
 );
 
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {  return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
@@ -52,28 +54,18 @@ export default class App extends React.Component {
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8}>
             <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
+       
+            <GitHubInfo />
           </VStack>
           <Child1></Child1>
           <Child2></Child2>
           <Child3></Child3>
           <Child4></Child4>
         </Grid>
-        <Routes>
+        {/* <Routes> */}
         {/* <Route path="/" element={<Home/>}/>
         <Route path="/why" element={<Why/>} /> */}
-      </Routes>
+      {/* </Routes> */}
       </Box>
     </ChakraProvider>
   );
