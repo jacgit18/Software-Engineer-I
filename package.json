@@ -1,5 +1,8 @@
 {
   "name": "software-engineer-i",
+  "config": {
+    "port": "4000"
+  },
   "version": "1.0.0",
   "description": "<img src=\"https://media2.giphy.com/media/Nx0rz3jtxtEre/giphy.gif?cid=ecf05e47k1el00v2wbzxdaemqy93cxosmaf6bp2r9trzlc03&rid=giphy.gif&ct=g\"/>",
   "main": "index.js",
@@ -21,11 +24,15 @@
   
   "dependencies": {
     "axios": "^0.26.0",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+
   }
 }

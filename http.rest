@@ -1,0 +1,27 @@
+GET http://localhost:5000/
+
+###
+POST http://localhost:5000/
+
+
+###
+GET http://localhost:5000/api/ping
+
+
+###
+# GET http://localhost:3000/prod/brush?erik=4
+GET http://localhost:3000/api/ping?posts[0].authorId=8
+
+
+###
+POST http://localhost:3000/api/ping
+Content-Type: application/json
+
+{
+    "title": "test",
+    "id": "5"
+}
+
+
+###
+POST http://localhost:3000
